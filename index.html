@@ -1,0 +1,234 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Vibras Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #FFF8F1;
+      margin: 0;
+      padding: 0;
+      color: #7D3F0F;
+    }
+
+    header {
+      background-color: #C27933;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    header img {
+      width: 100px;
+    }
+
+    h1 {
+      margin: 10px 0 5px;
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 1px 1px 3px #74330B;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1rem;
+      color: #fefefe;
+      text-shadow: 1px 1px 2px #74330B;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .product {
+      background-color: #fff;
+      border: 2px solid #99521C;
+      border-radius: 10px;
+      width: 280px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.02);
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .product h2 {
+      font-size: 1rem;
+      margin: 10px 0;
+      color: #74330B;
+    }
+
+    .product a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #7D3F0F;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .product a:hover {
+      background-color: #99521C;
+    }
+
+    footer {
+      background-color: #C27933;
+      text-align: center;
+      padding: 15px;
+      color: white;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* Botón flotante de WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+      width: 35px;
+      margin-top: 12px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .product-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .product {
+        width: 90%;
+      }
+
+      header img {
+        width: 80px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+      }
+
+      .whatsapp-float img {
+        width: 28px;
+        margin-top: 11px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://imgur.com/tD7Dzjf.png" alt="Vibras Store Logo">
+    <h1>Vibras Store</h1>
+    <p>Servicios Digitales al Mejor Precio</p>
+  </header>
+
+  <section class="product-container">
+    <div class="product">
+      <img src="https://imgur.com/DnO0Dk8.png" alt="Seguidores y Likes">
+      <h2>Seguidores y Likes para Instagram y TikTok</h2>
+      <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20comprar%20seguidores%20y%20likes">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="https://imgur.com/l4VHqjI.png" alt="Recarga videojuegos">
+      <h2>Recarga para Todos los Videojuegos</h2>
+      <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20comprar%20recarga%20para%20videojuegos">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="https://imgur.com/giHAidc.png" alt="Streaming">
+      <h2>Plataformas de Streaming</h2>
+      <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20comprar%20plataformas%20de%20streaming">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="https://imgur.com/jt7cOyh.png" alt="Flyers">
+      <h2>Flyers para tu Negocio</h2>
+      <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20comprar%20flyers%20para%20mi%20negocio">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="https://imgur.com/rHrxzQX.png" alt="Internet ilimitado">
+      <h2>Internet Ilimitado Personal</h2>
+      <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20comprar%20internet%20ilimitado">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="https://imgur.com/rpD9CgY.png" alt="Combo Streaming">
+      <h2>Combo 3x1 Plataformas de Streaming</h2>
+      <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20comprar%20el%20combo%203x1%20de%20streaming">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="https://imgur.com/0RNl4U9.png" alt="Canva Premium">
+      <h2>Canva Premium</h2>
+      <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20comprar%20Canva%20Premium">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="https://imgur.com/KXamPYC.png" alt="Links de música viral">
+      <h2>Links de Músicas Virales</h2>
+      <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20comprar%20links%20de%20músicas%20virales">Comprar</a>
+    </div>
+
+    <div class="product">
+      <img src="https://imgur.com/sBpx4Nf.png" alt="Creación de páginas web">
+      <h2>Creación de Páginas Web</h2>
+      <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio">Comprar</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Vibras Store. Todos los derechos reservados.
+  </footer>
+
+  <!-- Botón flotante WhatsApp con mensaje prellenado -->
+  <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Vibras%20Store" 
+     class="whatsapp-float" 
+     target="_blank" 
+     title="Chatea con nosotros">
+    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp">
+  </a>
+
+</body>
+</html>
