@@ -1,3 +1,4 @@
+
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -10,6 +11,12 @@
       margin: 0;
       padding: 0;
       color: #7D3F0F;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #f0e6dd;
     }
 
     header {
@@ -96,7 +103,6 @@
       font-size: 0.9rem;
     }
 
-    /* Botón flotante de WhatsApp */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -122,7 +128,24 @@
       margin-top: 12px;
     }
 
-    /* Responsive Design */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #7D3F0F;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 200;
+      font-weight: bold;
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: #99521C;
+    }
+
     @media (max-width: 768px) {
       .product-container {
         flex-direction: column;
@@ -152,9 +175,96 @@
         margin-top: 11px;
       }
     }
+
+    .testimonials {
+      padding: 40px 20px;
+      background-color: #fff1e6;
+      text-align: center;
+    }
+
+    body.dark-mode .testimonials {
+      background-color: #292929;
+    }
+
+    .testimonials h2 {
+      font-size: 2rem;
+      color: #7D3F0F;
+      margin-bottom: 10px;
+    }
+
+    body.dark-mode .testimonials h2 {
+      color: #ffcf9f;
+    }
+
+    .testimonials .subtitle {
+      font-size: 1rem;
+      color: #99521C;
+      margin-bottom: 30px;
+    }
+
+    body.dark-mode .testimonials .subtitle {
+      color: #e0b27c;
+    }
+
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 90%;
+      margin: auto;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-track img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 10px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(125, 63, 15, 0.8);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 5px 15px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(153, 82, 28, 0.9);
+    }
+
+    .carousel-btn.prev {
+      left: 0;
+    }
+
+    .carousel-btn.next {
+      right: 0;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-track img {
+        max-width: 220px;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <button class="dark-mode-toggle" onclick="document.body.classList.toggle('dark-mode')">
+    Modo Oscuro
+  </button>
 
   <header>
     <img src="https://imgur.com/tD7Dzjf.png" alt="Vibras Store Logo">
@@ -188,12 +298,6 @@
     </div>
 
     <div class="product">
-      <img src="https://imgur.com/rHrxzQX.png" alt="Internet ilimitado">
-      <h2>Internet Ilimitado Personal</h2>
-      <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20comprar%20internet%20ilimitado">Comprar</a>
-    </div>
-
-    <div class="product">
       <img src="https://imgur.com/rpD9CgY.png" alt="Combo Streaming">
       <h2>Combo 3x1 Plataformas de Streaming</h2>
       <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20comprar%20el%20combo%203x1%20de%20streaming">Comprar</a>
@@ -218,17 +322,55 @@
     </div>
   </section>
 
+  <section class="testimonials">
+    <h2>Testimonios de Clientes</h2>
+    <p class="subtitle">Ellos ya confiaron en Vibras Store</p>
+    <div class="carousel-container">
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="carousel-track">
+        <img src="https://imgur.com/h3MRWb1.jpg" alt="Testimonio 1">
+        <img src="https://imgur.com/4mhoS9M.jpg" alt="Testimonio 2">
+        <img src="https://imgur.com/WIG4CkP.jpg" alt="Testimonio 3">
+        <img src="https://imgur.com/wBD80Eb.jpg" alt="Testimonio 4">
+        <img src="https://imgur.com/9Io6Zdw.jpg" alt="Testimonio 5">
+        <img src="https://imgur.com/L8wwY7H.jpg" alt="Testimonio 6">
+        <img src="https://imgur.com/X0rKe23.jpg" alt="Testimonio 7">
+        <img src="https://imgur.com/2AxA8t9.jpg" alt="Testimonio 8">
+      </div>
+      <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </section>
+
   <footer>
     © 2025 Vibras Store. Todos los derechos reservados.
   </footer>
 
-  <!-- Botón flotante WhatsApp con mensaje prellenado -->
   <a href="https://wa.me/595991779325?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Vibras%20Store" 
      class="whatsapp-float" 
      target="_blank" 
      title="Chatea con nosotros">
     <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp">
   </a>
+
+  <script>
+    let index = 0;
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-track img');
+    const visibleSlides = 3;
+
+    function moveSlide(step) {
+      const totalSlides = slides.length;
+      index += step;
+
+      if (index < 0) index = totalSlides - visibleSlides;
+      if (index > totalSlides - visibleSlides) index = 0;
+
+      const offset = -index * (slides[0].offsetWidth + 20);
+      track.style.transform = translateX(${offset}px);
+    }
+
+    window.addEventListener('resize', () => moveSlide(0));
+  </script>
 
 </body>
 </html>
